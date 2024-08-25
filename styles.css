@@ -27,6 +27,7 @@ nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 nav ul li a {
@@ -75,8 +76,9 @@ nav ul li a {
 }
 
 .search-button img {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
+
 }
 
 
@@ -91,12 +93,12 @@ nav ul li a {
 }
 
 .button-container img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-right: 5px;
 }
 
-.button-container span {
+.button-container h5 {
     font-size: 18px;
     color: #F48E28;
      /* Text color similar to the image */
@@ -117,24 +119,26 @@ nav ul li a {
     line-height: 1.2;
 }
 
-
-
 h1 {
     margin: 0;
     font-size: 3rem;
-}
+} 
 
 .black-text {
     color: black;
+    font-size: 96px;
 }
 
 .orange-text {
     color: orange;
+    font-size: 96px;
 }
 
 .hero-text p {
     color: #666;
     margin: 20px 0;
+    font-size: 18px;
+    font-family: sans-serif;
 }
 
 .hero-buttons {
@@ -142,10 +146,11 @@ h1 {
     gap: 15px;
 }
 
+
 .hero-buttons button {
     padding: 10px 20px;
     border: none;
-    font-size: 16px;
+    font-size: 26px;
     cursor: pointer;
 }
 
@@ -179,6 +184,18 @@ h1 {
     width: 200px;
 }
 
+.featured-items .item h4{
+    font-size: 26px;
+}
+.featured-items .item p{
+    font-size: 18px;
+}
+.featured-items .item h5{
+    font-size: 18px;
+}
+
+
+
 .featured-items .item img {
     max-width: 100%;
     border-radius: 10px;
@@ -205,7 +222,7 @@ h1 {
 .info-block p {
     margin: 0;
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -227,22 +244,40 @@ h1 {
 }
 .info-block img{
     background-color: #e66b00;
+    width: 42px;
+    height: 42px;
+    top: 1130px;
+     left: 418px;
+     gap: 0px;
+    opacity: 0px;
+
 }
-.info-block  {
+.info-block p {
     text-align: center;
     flex: 1;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
+}
+.info-block h5 {
+    text-align: center;
+    flex: 1;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .popular-items-section {
     text-align: center;
 }
 
-.popular-items-section h2 {
-    font-size: 24px;
+.popular-items-section h3 {
+    font-size: 36px;
     margin-bottom: 30px;
 }
+.popular-items-section p {
+    font-size: 18px;
+    color: #F48E28;
+}
+
 
 .popular-items-grid {
     display: flex;
@@ -253,43 +288,88 @@ h1 {
 .itemss{
     display: flex;
 }
-.item {
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 200px;
-    padding: 15px;
-    text-align: center;
+
+
+.card {
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.item img {
+.image-container {
     width: 100%;
-    border-radius: 10px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+}
+
+.text-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-button h4 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.item-info {
-    margin-bottom: 10px;
+.btn {
+    background-color: #ff7f23;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.item-info p {
-    margin: 5px 0;
+.btn:hover {
+    background-color: #e6701b;
+}
+
+.rating-price {
+    text-align: right;
+}
+
+.rating {
+    font-size: 13px;
+    color: #ffcc00;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .price {
+    font-size: 18px;
     font-weight: bold;
-    color: #ff6600;
+    color: #333;
 }
 
-.add-to-cart {
-    background-color: #ff6600;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
+
+
+
+
+
 
 .see-more {
     background-color: #ff6600;
@@ -328,14 +408,17 @@ button.toggle-products:hover {
 .services {
     text-align: center;
 }
-.services h4{
+.services p{
     text-align: center;
-    color: #e67e22;
+    color: #F48E28;
+    font-size: 18px;
 }
-.services h2 {
-    font-size: 24px;
+.services h3 {
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #000;
+    color: #000; 
+
+   
 }
 
 .service-container {
@@ -355,20 +438,20 @@ button.toggle-products:hover {
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 10px;
     color: #f8b400;
 }
 
-.service-box h3 {
-    font-size: 18px;
+.service-box h4 {
+    font-size: 26px;
     margin-bottom: 10px;
-    color: #333;
+    color:#000000;
 }
 
 .service-box p {
-    font-size: 14px;
-    color: #666;
+    font-size: 18px;
+    color: #333;
     line-height: 1.5;
 }
 
@@ -402,6 +485,7 @@ button.toggle-products:hover {
     flex: 1;
     padding: 20px;
     text-align: center;
+    color: #000000;
 }
 
 .profile-image {
@@ -411,25 +495,35 @@ button.toggle-products:hover {
     margin-bottom: 10px;
 }
 
-.testimonial-text h3 {
+.testimonial-container p {
     margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-}
+    font-size: 18px;
+    color: #F48E28 ;
+} 
 
-.testimonial-text h4 {
+.testimonial-text h5 {
     margin: 5px 0;
-    font-size: 1rem;
-    color: #888;
+    font-size: 18px;
+    color: #000000;
 }
 
 .testimonial-text p {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 18px;
+color: #000000;
     line-height: 1.5;
 }
 
 .testimonial-image {
+
+width: 750px;
+height: 445px;
+top: 3718px;
+left: 991px;
+gap: 0px;
+opacity: 0px;
+
+
+
     flex: 1;
     display: flex;
     justify-content: center;
@@ -453,19 +547,99 @@ button.toggle-products:hover {
 }
 
 
-.testimonial-container h4{
+.testimonial-container p{
     text-align: center;
-    color: #ff6600;
+    /*color: #e66b00;*/
+    font-size: 18px;
     
 }
 
 
-.testimonial-container h2{
+.testimonial-container h3{
     text-align: center;
-    
-    
+    font-size: 36px;
+    color: #000000;
 }
 
+.testimonial-container {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    
+    
+
+}
+
+
+
+
+
+
+
+
+.testimonial-slider {
+    position: relative;
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    margin: 5px 0 15px;
+    font-size: 14px;
+    color: gray;
+}
+
+blockquote {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-button img {
+    width: 40px; /* Adjust the size of the buttons */
+    height: 40px;
+    object-fit: contain;
+}
+
+.left-button {
+    left: -40px; /* Adjust to position correctly */
+}
+
+.right-button {
+    right: -40px; /* Adjust to position correctly */
+}
 
 
 
@@ -509,13 +683,13 @@ button.toggle-products:hover {
     justify-content: center;
 }
 
-.subscribe-content h2 {
-    font-size: 1.5rem;
+.subscribe-content h3 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
 .subscribe-content p {
-    font-size: 1rem;
+    font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -535,7 +709,7 @@ button.toggle-products:hover {
 
 .subscribe-form button {
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 18px;
     color: white;
     background-color: #ff7a00;
     border: none;
@@ -565,13 +739,16 @@ button.toggle-products:hover {
     color: #333;
 }
 
-.footer-column h3 {
-    font-size: 1.2rem;
+.footer-column h4 {
+    font-size: 26px;
     margin-bottom: 10px;
+    color: #000000;
 }
 
 .footer-column p {
-    font-size: 0.9rem;
+    color: #B6B6B6;
+    
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 10px;
 }
@@ -583,12 +760,14 @@ button.toggle-products:hover {
 
 .footer-column ul li {
     margin-bottom: 5px;
+
 }
 
 .footer-column ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
+    color: #B6B6B6;
+
+    font-size: 18px;
 }
 
 .footer-column ul li a:hover {
@@ -636,6 +815,7 @@ button.toggle-products:hover {
 .footer-form button:hover {
     background-color: #e66b00;
 }
+
 /*
 
 *{
@@ -644,5 +824,4 @@ button.toggle-products:hover {
 body{
     border: 2px dashed green;
 }
-
 */
